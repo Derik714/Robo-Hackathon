@@ -1,0 +1,53 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthcare Information Assistant</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Include a popular icon library (Font Awesome) for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-MFYl9e3Nn0TNn9B/3C2K0XrkL2LiZ/8OmFyEi5cC9W4NQvN3zPvj2vvL1eZFUxwo8wXqwC2En8V1jtHdRekDQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#" class="logo-link">
+                <img src="https://image.similarpng.com/very-thumbnail/2021/06/Medical-health-care-logo-design-template-on-transparent-background-PNG.png" alt="Healthcare Logo" class="logo">
+            </a>
+            
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="chatwithus.html">Chat with Us</a></li>
+                <li><a href="havesymptoms.html">Have Symptoms??</a></li>
+                <li><a href="#">Our services</a></li>
+                <li><a href="#">About us</a></li>
+                <li class="login-logout" id="loginBtn"><a href="#" onclick="toggleLogin()">Login</a></li>
+                <li class="login-logout" id="logoutBtn" style="display:none;"><a href="#" onclick="toggleLogin()">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="chat-section">
+        <div class="chat-container" id="chatContainer">
+            <!-- AI Assistant's Welcome Message -->
+            <div class="message received">
+                <p>Welcome! I'm your Healthcare Information Assistant. How can I assist you today?</p>
+            </div>
+        </div>
+    
+        <!-- User Input and Send Button -->
+        <div class="user-input">
+            <input type="text" id="userMessage" placeholder="Type your message...">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </section>
+    <script src="app.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

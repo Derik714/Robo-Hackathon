@@ -1,16 +1,23 @@
 import asyncio
 import websockets
 import backEndResult as BER
-import json  # Import the json module
+import getDoctors as GD
+import json  
 
 def get_details_about_disease(data):
     dis_name = BER.returnDiseaseName([data])
     dis_descip = BER.returnDiseaseDescription(dis_name)
     dis_precau = BER.returnDiseasePrecaution(dis_name)
-    Output1 = "You seem to be suffering from " + dis_name
-    Output2 = dis_descip
-    Output3 = [f"{i + 1}.{precaution}" for i, precaution in enumerate(dis_precau)]
-    return Output1, Output2, Output3
+    output1 = "You seem to be suffering from " + dis_name
+    output2 = dis_descip
+    output3 = [f"{i + 1}.{precaution}" for i, precaution in enumerate(dis_precau)]
+    dis_group, list_doc = GD.get_doc_details(dis_name)   
+    doctors_info = "\n".join([f"⚫{doc['Name']},Contact No:{doc['Contact']}" for doc in list_doc])
+    output3 = "\n".join(output3)
+    output3 += f"\nHere are some of our best {dis_group}\n{doctors_info}"
+
+
+    return output1, output2, output3
 
 async def receive_data(websocket, path):
     data = await websocket.recv()

@@ -412,6 +412,7 @@ socket.addEventListener('message', (event) => {
     // Create and append sections for each type of information
     createSection(predictionResults, 'Possible Disease', response.output1);
     createSection(predictionResults, 'Description of Disease', response.output2);
+    createDoctors(predictionResults, 'Contact our Doctors', response.output4)
     createRemediesSection(predictionResults, 'Remedies and Precautions', response.output3);
 }
 
@@ -431,6 +432,30 @@ function createSection(container, heading, content) {
 
     container.appendChild(section);
 }
+function createDoctors(container, heading, doctors) {
+  const section = document.createElement('div');
+  section.classList.add('result-section');
+
+  const headingElement = document.createElement('h2');
+  headingElement.textContent = heading;
+
+  const listElement = document.createElement('ul');
+  doctors.forEach((doctor, index) => {
+      const listItem = document.createElement('li');
+      listItem.textContent = doctor;
+      listElement.appendChild(listItem);
+      // Add a line break after each list item
+      if (index < doctors.length - 1) {
+        listElement.appendChild(document.createElement('br'));
+    }
+  });
+
+  section.appendChild(headingElement);
+  section.appendChild(listElement);
+
+  container.appendChild(section);
+}
+
 
 // Function to create a section for remedies and precautions
 function createRemediesSection(container, heading, remedies) {

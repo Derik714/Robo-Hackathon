@@ -90,8 +90,16 @@ app.get("/chatwithus",function(req,res){
   res.render("chatwithus");
 });
 
+app.get("/aboutUS",function(req,res){
+  res.render("aboutUS");
+});
+
 app.get("/havesymptoms",function(req,res){
   res.render("havesymptoms");
+});
+
+app.get("/ourServices",function(req,res){
+  res.render("ourServices");
 });
 
 app.post("/register", (req, res) =>{

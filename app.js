@@ -51,140 +51,7 @@ function toggleLoginButtons(isLoggedIn) {
 }
 
 // Array of Symptoms
-const symptomsList = [
-  "itching",
-  "skin_rash",
-  "nodal_skin_eruptions",
-  "continuous_sneezing",
-  "shivering",
-  "chills",
-  "joint_pain",
-  "stomach_pain",
-  "acidity",
-  "ulcers_on_tongue",
-  "muscle_wasting",
-  "vomiting",
-  "burning_micturition",
-  "spotting_urination",
-  "fatigue",
-  "weight_gain",
-  "anxiety",
-  "cold_hands_and_feets",
-  "mood_swings",
-  "weight_loss",
-  "restlessness",
-  "lethargy",
-  "patches_in_throat",
-  "irregular_sugar_level",
-  "cough",
-  "high_fever",
-  "sunken_eyes",
-  "breathlessness",
-  "sweating",
-  "dehydration",
-  "indigestion",
-  "headache",
-  "yellowish_skin",
-  "dark_urine",
-  "nausea",
-  "loss_of_appetite",
-  "pain_behind_the_eyes",
-  "back_pain",
-  "constipation",
-  "abdominal_pain",
-  "diarrhoea",
-  "mild_fever",
-  "yellow_urine",
-  "yellowing_of_eyes",
-  "acute_liver_failure",
-  "fluid_overload",
-  "swelling_of_stomach",
-  "swelled_lymph_nodes",
-  "malaise",
-  "blurred_and_distorted_vision",
-  "phlegm",
-  "throat_irritation",
-  "redness_of_eyes",
-  "sinus_pressure",
-  "runny_nose",
-  "congestion",
-  "chest_pain",
-  "weakness_in_limbs",
-  "fast_heart_rate",
-  "pain_during_bowel_movements",
-  "pain_in_anal_region",
-  "bloody_stool",
-  "irritation_in_anus",
-  "neck_pain",
-  "dizziness",
-  "cramps",
-  "bruising",
-  "obesity",
-  "swollen_legs",
-  "swollen_blood_vessels",
-  "puffy_face_and_eyes",
-  "enlarged_thyroid",
-  "brittle_nails",
-  "swollen_extremeties",
-  "excessive_hunger",
-  "extra_marital_contacts",
-  "drying_and_tingling_lips",
-  "slurred_speech",
-  "knee_pain",
-  "hip_joint_pain",
-  "muscle_weakness",
-  "stiff_neck",
-  "swelling_joints",
-  "movement_stiffness",
-  "spinning_movements",
-  "loss_of_balance",
-  "unsteadiness",
-  "weakness_of_one_body_side",
-  "loss_of_smell",
-  "bladder_discomfort",
-  "foul_smell_ofurine",
-  "continuous_feel_of_urine",
-  "passage_of_gases",
-  "internal_itching",
-  "toxic_look_(typhos)",
-  "depression",
-  "irritability",
-  "muscle_pain",
-  "altered_sensorium",
-  "red_spots_over_body",
-  "belly_pain",
-  "abnormal_menstruation",
-  "dischromic_patches",
-  "watering_from_eyes",
-  "increased_appetite",
-  "polyuria",
-  "family_history",
-  "mucoid_sputum",
-  "rusty_sputum",
-  "lack_of_concentration",
-  "visual_disturbances",
-  "receiving_blood_transfusion",
-  "receiving_unsterile_injections",
-  "coma",
-  "stomach_bleeding",
-  "distention_of_abdomen",
-  "history_of_alcohol_consumption",
-  "blood_in_sputum",
-  "prominent_veins_on_calf",
-  "palpitations",
-  "painful_walking",
-  "pus_filled_pimples",
-  "blackheads",
-  "scurring",
-  "skin_peeling",
-  "silver_like_dusting",
-  "small_dents_in_nails",
-  "inflammatory_nails",
-  "blister",
-  "red_sore_around_nose",
-  "yellow_crust_ooze",
-  "prognosis",
-];
+const symptomsList = ['Itching', 'Skin Rash', 'Skin Eruptions', 'Sneezing', 'Shivering', 'Chills', 'Joint Pain', 'Stomach Pain', 'Acidity', 'Ulcers on Tongue', 'Muscle Wasting', 'Vomiting', 'Burning Urination', 'Spotting Urination', 'Fatigue', 'Weight Gain', 'Anxiety', 'Cold Hands/Feet', 'Mood Swings', 'Weight Loss', 'Restlessness', 'Lethargy', 'Throat Patches', 'Irregular Sugar', 'Cough', 'High Fever', 'Sunken Eyes', 'Breathlessness', 'Sweating', 'Dehydration', 'Indigestion', 'Headache', 'Yellowish Skin', 'Dark Urine', 'Nausea', 'Loss of Appetite', 'Pain Behind Eyes', 'Back Pain', 'Constipation', 'Abdominal Pain', 'Diarrhea', 'Mild Fever', 'Yellow Urine', 'Yellowing of Eyes', 'Liver Failure', 'Fluid Overload', 'Stomach Swelling', 'Swelled Lymph Nodes', 'Malaise', 'Blurred Vision', 'Phlegm', 'Throat Irritation', 'Redness of Eyes', 'Sinus Pressure', 'Runny Nose', 'Congestion', 'Chest Pain', 'Weakness in Limbs', 'Fast Heart Rate', 'Pain during Bowel Movements', 'Anal Pain', 'Bloody Stool', 'Anus Irritation', 'Neck Pain', 'Dizziness', 'Cramps', 'Bruising', 'Obesity', 'Swollen Legs', 'Swollen Blood Vessels', 'Puffy Face/Eyes', 'Enlarged Thyroid', 'Brittle Nails', 'Swollen Extremities', 'Excessive Hunger', 'Extra Marital Contacts', 'Lips Tingling', 'Slurred Speech', 'Knee Pain', 'Hip Joint Pain', 'Muscle Weakness', 'Stiff Neck', 'Swelling Joints', 'Movement Stiffness', 'Spinning Movements', 'Loss of Balance', 'Unsteadiness', 'Weakness One Side', 'Loss of Smell', 'Bladder Discomfort', 'Foul Smell of Urine', 'Continuous Feel of Urine', 'Passage of Gases', 'Internal Itching', 'Toxic Look (Typhos)', 'Depression', 'Irritability', 'Muscle Pain', 'Altered Sensorium', 'Red Spots Body', 'Belly Pain', 'Abnormal Menstruation', 'Dischromic Patches', 'Watering Eyes', 'Increased Appetite', 'Polyuria', 'Family History', 'Mucoid Sputum', 'Rusty Sputum', 'Lack of Concentration', 'Visual Disturbances', 'Receiving Blood Transfusion', 'Receiving Unsterile Injections', 'Coma', 'Stomach Bleeding', 'Distended Abdomen', 'History of Alcohol Consumption', 'Blood in Sputum', 'Veins on Calf', 'Palpitations', 'Painful Walking', 'Pus-filled Pimples', 'Blackheads', 'Scurring', 'Skin Peeling', 'Silver Dusting', 'Small Dents in Nails', 'Inflammatory Nails', 'Blister', 'Red Sore Nose', 'Yellow Crust Ooze', 'Prognosis'];
 
 symptomsList.sort();
 // Function to dynamically generate dropdowns
@@ -238,139 +105,138 @@ function predictDisease() {
 //   dataset 
 
 const symptomData = `
-itching	1
-skin_rash	3
-nodal_skin_eruptions	4
-continuous_sneezing	4
-shivering	5
-chills	3
-joint_pain	3
-stomach_pain	5
-acidity	3
-ulcers_on_tongue	4
-muscle_wasting	3
-vomiting	5
-burning_micturition	6
-spotting_urination	6
-fatigue	4
-weight_gain	3
-anxiety	4
-cold_hands_and_feets	5
-mood_swings	3
-weight_loss	3
-restlessness	5
-lethargy	2
-patches_in_throat	6
-irregular_sugar_level	5
-cough	4
-high_fever	7
-sunken_eyes	3
-breathlessness	4
-sweating	3
-dehydration	4
-indigestion	5
-headache	3
-yellowish_skin	3
-dark_urine	4
-nausea	5
-loss_of_appetite	4
-pain_behind_the_eyes	4
-back_pain	3
-constipation	4
-abdominal_pain	4
-diarrhoea	6
-mild_fever	5
-yellow_urine	4
-yellowing_of_eyes	4
-acute_liver_failure	6
-fluid_overload	6
-swelling_of_stomach	7
-swelled_lymph_nodes	6
-malaise	6
-blurred_and_distorted_vision	5
-phlegm	5
-throat_irritation	4
-redness_of_eyes	5
-sinus_pressure	4
-runny_nose	5
-congestion	5
-chest_pain	7
-weakness_in_limbs	7
-fast_heart_rate	5
-pain_during_bowel_movements	5
-pain_in_anal_region	6
-bloody_stool	5
-irritation_in_anus	6
-neck_pain	5
-dizziness	4
-cramps	4
-bruising	4
-obesity	4
-swollen_legs	5
-swollen_blood_vessels	5
-puffy_face_and_eyes	5
-enlarged_thyroid	6
-brittle_nails	5
-swollen_extremeties	5
-excessive_hunger	4
-extra_marital_contacts	5
-drying_and_tingling_lips	4
-slurred_speech	4
-knee_pain	3
-hip_joint_pain	2
-muscle_weakness	2
-stiff_neck	4
-swelling_joints	5
-movement_stiffness	5
-spinning_movements	6
-loss_of_balance	4
-unsteadiness	4
-weakness_of_one_body_side	4
-loss_of_smell	3
-bladder_discomfort	4
-foul_smell_ofurine	5
-continuous_feel_of_urine	6
-passage_of_gases	5
-internal_itching	4
-toxic_look_(typhos)	5
-depression	3
-irritability	2
-muscle_pain	2
-altered_sensorium	2
-red_spots_over_body	3
-belly_pain	4
-abnormal_menstruation	6
-dischromic_patches	6
-watering_from_eyes	4
-increased_appetite	5
-polyuria	4
-family_history	5
-mucoid_sputum	4
-rusty_sputum	4
-lack_of_concentration	3
-visual_disturbances	3
-receiving_blood_transfusion	5
-receiving_unsterile_injections	2
-coma	7
-stomach_bleeding	6
-distention_of_abdomen	4
-history_of_alcohol_consumption	5
-fluid_overload	4
-blood_in_sputum	5
-prominent_veins_on_calf	6
-palpitations	4
-painful_walking	2
-pus_filled_pimples	2
-blackheads	2
-scurring	2
-skin_peeling	3
-silver_like_dusting	2
-small_dents_in_nails	2
-inflammatory_nails	2
-blister	4
-red_sore_around_nose	2
-yellow_crust_ooze	3
-prognosis	5
+Itching: 1
+Skin Rash: 3
+Skin Eruptions: 4
+Sneezing: 4
+Shivering: 5
+Chills: 3
+Joint Pain: 3
+Stomach Pain: 5
+Acidity: 3
+Ulcers on Tongue: 4
+Muscle Wasting: 3
+Vomiting: 5
+Burning Urination: 6
+Spotting Urination: 6
+Fatigue: 4
+Weight Gain: 3
+Anxiety: 4
+Cold Hands/Feet: 5
+Mood Swings: 3
+Weight Loss: 3
+Restlessness: 5
+Lethargy: 2
+Throat Patches: 6
+Irregular Sugar: 5
+Cough: 4
+High Fever: 7
+Sunken Eyes: 3
+Breathlessness: 4
+Sweating: 3
+Dehydration: 4
+Indigestion: 5
+Headache: 3
+Yellowish Skin: 3
+Dark Urine: 4
+Nausea: 5
+Loss of Appetite: 4
+Pain Behind Eyes: 4
+Back Pain: 3
+Constipation: 4
+Abdominal Pain: 4
+Diarrhea: 6
+Mild Fever: 5
+Yellow Urine: 4
+Yellowing of Eyes: 4
+Liver Failure: 6
+Fluid Overload: 6
+Stomach Swelling: 7
+Swelled Lymph Nodes: 6
+Malaise: 6
+Blurred Vision: 5
+Phlegm: 5
+Throat Irritation: 4
+Redness of Eyes: 5
+Sinus Pressure: 4
+Runny Nose: 5
+Congestion: 5
+Chest Pain: 7
+Weakness in Limbs: 7
+Fast Heart Rate: 5
+Pain during Bowel Movements: 5
+Anal Pain: 6
+Bloody Stool: 5
+Anus Irritation: 6
+Neck Pain: 5
+Dizziness: 4
+Cramps: 4
+Bruising: 4
+Obesity: 4
+Swollen Legs: 5
+Swollen Blood Vessels: 5
+Puffy Face/Eyes: 5
+Enlarged Thyroid: 6
+Brittle Nails: 5
+Swollen Extremities: 5
+Excessive Hunger: 4
+Extra Marital Contacts: 5
+Lips Tingling: 4
+Slurred Speech: 4
+Knee Pain: 3
+Hip Joint Pain: 2
+Muscle Weakness: 2
+Stiff Neck: 4
+Swelling Joints: 5
+Movement Stiffness: 5
+Spinning Movements: 6
+Loss of Balance: 4
+Unsteadiness: 4
+Weakness One Side: 4
+Loss of Smell: 3
+Bladder Discomfort: 4
+Foul Smell of Urine: 5
+Continuous Feel of Urine: 6
+Passage of Gases: 5
+Internal Itching: 4
+Toxic Look (Typhos): 5
+Depression: 3
+Irritability: 2
+Muscle Pain: 2
+Altered Sensorium: 2
+Red Spots Body: 3
+Belly Pain: 4
+Abnormal Menstruation: 6
+Dischromic Patches: 6
+Watering Eyes: 4
+Increased Appetite: 5
+Polyuria: 4
+Family History: 5
+Mucoid Sputum: 4
+Rusty Sputum: 4
+Lack of Concentration: 3
+Visual Disturbances: 3
+Receiving Blood Transfusion: 5
+Receiving Unsterile Injections: 2
+Coma: 7
+Stomach Bleeding: 6
+Distended Abdomen: 4
+History of Alcohol Consumption: 5
+Blood in Sputum: 5
+Veins on Calf: 6
+Palpitations: 4
+Painful Walking: 2
+Pus-filled Pimples: 2
+Blackheads: 2
+Scurring: 2
+Skin Peeling: 3
+Silver Dusting: 2
+Small Dents in Nails: 2
+Inflammatory Nails: 2
+Blister: 4
+Red Sore Nose: 2
+Yellow Crust Ooze: 3
+Prognosis: 5
 `;
 
 const symptomDictionary = {};
